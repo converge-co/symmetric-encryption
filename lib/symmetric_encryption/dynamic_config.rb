@@ -1,14 +1,14 @@
 module SymmetricEncryption
-  module Config
+  module DynamicConfig
     # Load the Encryption Configuration from a YAML file
     #  filename:
     #    Name of file to read.
     #        Mandatory for non-Rails apps
-    #      Default: Rails.root/config/symmetric-encryption.yml
+    #    Default: Rails.root/config/symmetric-encryption.yml
     #  environment:
     #    Which environments config to load. Usually: production, development, etc.
     #    Default: Rails.env
-    def self.load!(filename=nil, environment=nil)
+    def self.load_master_cipher!(filename=nil, environment=nil)
       config  = read_config(filename, environment)
       ciphers = extract_ciphers(config)
 

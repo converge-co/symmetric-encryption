@@ -10,7 +10,7 @@ module SymmetricEncryption #:nodoc:
     #       config.symmetric_encryption.cipher = SymmetricEncryption::Cipher.new(
     #         key:    '1234567890ABCDEF1234567890ABCDEF',
     #         iv:     '1234567890ABCDEF',
-    #         cipher_name: 'aes-128-cbc'
+    #         cipher_name: \ 'aes-128-cbc'
     #       )
     #     end
     #   end
